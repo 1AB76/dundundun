@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+    background: #121212;
+}
+
+html {
+    color: var(--c-text);
+    background-color: var(--c-bg);
+
+    scroll-behavior: smooth;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* a {
+    color: var(--c-text);
+} */
