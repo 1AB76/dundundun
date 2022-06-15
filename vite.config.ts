@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages';
@@ -15,7 +15,9 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    Vue({
+      reactivityTransform: true,
+    }),
     Pages(),
     Layouts(),
     Components({
@@ -59,7 +61,11 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
+      dirs: [
+        './src/composables',
+      ],
       dts: true,
+      vueTemplate: true
     }),
   ]
 })
