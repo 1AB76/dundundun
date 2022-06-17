@@ -29,7 +29,9 @@
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "auto-imports.d.ts",
+    "components.d.ts"
   ],
   "exclude": [
     "**/dist/**"

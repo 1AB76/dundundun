@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import ChooseBeer from '~/components/ChooseBeer.vue';
 </script>
 
 <template>
@@ -12,7 +11,7 @@
                 fucking life let's dun dun dun
             </p>
         </div>
-        <ChooseBeer name="skksksk" />
+        <ChooseBeer name="wang k" />
     </div>
 </template>
 
