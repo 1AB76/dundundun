@@ -13,7 +13,7 @@ function clicked() {
 
 onMounted(() => {
     // @ts-ignore
-    function onMessage() {
+    window.onMessage = () => {
         show = !show;
     }
 });
