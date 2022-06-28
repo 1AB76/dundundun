@@ -8,15 +8,9 @@ let show = $ref(false);
 
 function clicked() {
     var parms = { 'beer': '1.5L new beer' };
+    // @ts-ignore
     window.webkit.messageHandlers.chooseBeer.postMessage(parms);
 }
-
-// onMounted(() => {
-//     // @ts-ignore
-//     window.onMessage = () => {
-//         show = !show;
-//     }
-// });
 
 // @ts-ignore
 window.onMessage = () => {
