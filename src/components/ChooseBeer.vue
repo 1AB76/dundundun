@@ -4,9 +4,16 @@ defineProps<{
     name: string
 }>()
 
+let show = $ref(false);
+
 function clicked() {
     var parms = { 'beer': '1.5L new beer' };
     window.webkit.messageHandlers.chooseBeer.postMessage(parms);
+}
+
+// @ts-ignore
+function onMessage() {
+    show = !show;
 }
 
 </script>
@@ -18,4 +25,5 @@ function clicked() {
         <div class="inline-flex justify-center items-center aspect-[4/3] bg-red-400">hello, {{ name }}</div>
     </div>
     <button @click="clicked">click</button>
+    <div v-show="show">native to show</div>
 </template>
