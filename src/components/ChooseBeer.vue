@@ -11,12 +11,17 @@ function clicked() {
     window.webkit.messageHandlers.chooseBeer.postMessage(parms);
 }
 
-onMounted(() => {
-    // @ts-ignore
-    window.onMessage = () => {
-        show = !show;
-    }
-});
+// onMounted(() => {
+//     // @ts-ignore
+//     window.onMessage = () => {
+//         show = !show;
+//     }
+// });
+
+// @ts-ignore
+window.onMessage = () => {
+    show = !show;
+}
 
 </script>
 
